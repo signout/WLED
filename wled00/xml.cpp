@@ -562,6 +562,7 @@ void getSettingsJS(byte subPage, char* dest)
     sappend('v',SET_F("OM"),analogClock12pixel);
     sappend('c',SET_F("OS"),analogClockSecondsTrail);
     sappend('c',SET_F("O5"),analogClock5MinuteMarks);
+    sappend('c',SET_F("ON5"),analogClockNoSeconds);
     #ifndef WLED_DISABLE_CRONIXIE
     sappends('s',SET_F("CX"),cronixieDisplay);
     sappend('c',SET_F("CB"),cronixieBacklight);

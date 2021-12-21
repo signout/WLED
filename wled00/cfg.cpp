@@ -342,6 +342,7 @@ bool deserializeConfig(JsonObject doc, bool fromFS) {
   CJSON(analogClock12pixel, ol[F("o12pix")]);
   CJSON(analogClock5MinuteMarks, ol[F("o5m")]);
   CJSON(analogClockSecondsTrail, ol[F("osec")]);
+  CJSON(analogClockNoSeconds, ol[F("nosec")]);
 
   //timed macro rules
   JsonObject tm = doc[F("timers")];
@@ -721,6 +722,7 @@ void serializeConfig() {
   ol[F("o12pix")] = analogClock12pixel;
   ol[F("o5m")] = analogClock5MinuteMarks;
   ol[F("osec")] = analogClockSecondsTrail;
+  ol[F("nosec")] = analogClockNoSeconds;
 
   JsonObject timers = doc.createNestedObject(F("timers"));
 

@@ -197,6 +197,7 @@ void loadSettingsFromEEPROM()
     countdownHour = EEPROM.read(2159);
     countdownMin = EEPROM.read(2160);
     countdownSec = EEPROM.read(2161);
+    analogClockNoSeconds = EEPROM.read(2162);
     setCountdown();
 
     #ifndef WLED_DISABLE_CRONIXIE
